@@ -22,7 +22,7 @@ namespace EmojiSkinToneModifier.EmojiDataParser
             HttpClient emojiDataDownloader = new HttpClient();
             var emojiData = emojiDataDownloader.GetStringAsync("http://www.unicode.org/Public/emoji/latest/emoji-data.txt").Result;
             var emojiBases = GetModifierBases(emojiData);
-            File.WriteAllLines("emojimodifierbases.txt", emojiBases);
+            File.WriteAllLines("ModifierBases.list", emojiBases);
         }
 
         private static string[] GetModifierBases(string emojiData)
