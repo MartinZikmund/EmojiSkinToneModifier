@@ -32,7 +32,7 @@ namespace EmojiSkinToneModifier.EmojiDataParser
             foreach (var line in lines)
             {
                 if (!line.StartsWith(CommentCharacter.ToString()) && //ignore comment lines
-                     line.Contains(EmojiModifierBaseDefinition)
+                        line.Contains(EmojiModifierBaseDefinition)
                     )
                 {
                     //parse line

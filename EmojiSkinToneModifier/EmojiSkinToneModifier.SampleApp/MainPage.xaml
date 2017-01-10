@@ -9,17 +9,17 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBox Text="{Binding Emoji, Mode=TwoWay}" HorizontalAlignment="Center" PlaceholderText="Enter an emoji..." />
+            <TextBox Text="{Binding Emoji, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="25" HorizontalAlignment="Center" PlaceholderText="Enter an emoji..." />
             <TextBlock Text="+" HorizontalAlignment="Center" />
             <ComboBox ItemsSource="{Binding SkinTones}" HorizontalAlignment="Center" SelectedItem="{Binding SelectedSkinTone, Mode=TwoWay}">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding Glyph}" FontFamily="Segoe UI Emoji" />
+                        <TextBlock Text="{Binding Glyph}"  FontSize="25" FontFamily="Segoe UI Emoji" />
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
             <TextBlock Text="=" HorizontalAlignment="Center" />
-            <TextBlock Text="{Binding Result, Mode=OneWay}" HorizontalAlignment="Center" FontFamily="Segoe UI Emoji" />
+            <TextBlock Text="{Binding Result, Mode=OneWay}" HorizontalAlignment="Center"  FontSize="30" FontFamily="Segoe UI Emoji" />
         </StackPanel>
     </Grid>
 </Page>
